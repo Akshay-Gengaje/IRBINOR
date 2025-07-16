@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'hover-gradient': 'linear-gradient(90deg, rgba(79,191,199,1) 44%, rgba(87,199,171,1) 76%)',
+      },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
         inter: ["Inter", "sans-serif"],

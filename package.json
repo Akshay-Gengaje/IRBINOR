@@ -4,9 +4,9 @@
   "description": "",
   "main": "tailwind.config.js",
   "scripts": {
-    "start": "live-server",
+    "start": "live-server /pubic/index.html",
     "build": "tailwindcss -i ./assets/css/input.css -o ./public/assets/css/styles.css",
-    "watch": "tailwindcss -i ./assets/css/input.css -o ./assets/css/styles.css --watch"
+    "watch": "tailwindcss -i ./assets/css/input.css -o ./public/assets/css/styles.css --watch"
   },
   "keywords": [],
   "author": "",

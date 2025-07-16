@@ -3,277 +3,635 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-    <script defer src="./assets/js/hover-effect.js"></script>
+    <meta
+      name="description"
+      content="Explore innovative design, management, hospitality, and gifting services on our homepage."
+    />
+    <meta
+      name="keywords"
+      content="Design, Management, Hospitality, Gifting, Creative Services"
+    />
+    <meta name="author" content="Your Company Name" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script defer src="/assets/js/hover-effect.js"></script>
+    <title>Creative Services | Design, Hospitality & Management</title>
 
-    <title>Homepage</title>
+    <style>
+      .card-hover .overlay {
+        background: linear-gradient(
+          90deg,
+          rgba(79, 191, 199, 0.7) 44%,
+          rgba(87, 199, 171, 0.7) 76%
+        );
+        z-index: 0;
+      }
+
+      .card-hover:hover .overlay {
+        opacity: 1;
+      }
+
+      .card-hover:hover {
+        color: #ffffff;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+      }
+
+      .card-hover:hover .count-up {
+        color: #ffffff;
+        text-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+      }
+    </style>
   </head>
   <body class="bg-black">
-    <!-- Nav Bar -->
-    <nav>
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-20">
-          <!-- Logo -->
-          <div class="flex items-center">
-            <img class="h-16" src="./assets/images/logo.jpg" alt="" />
-          </div>
-
-          <!-- Desktop Menu -->
-          <div class="hidden md:flex space-x-4 items-center gap-5 font-poppins">
-            <a
-              href="#"
-              class="text-md font-semibold text-white hover:text-primary"
-              >Home</a
-            >
-            <a
-              href="#"
-              class="text-md font-semibold text-gray-100 hover:text-primary"
-              >Services</a
-            >
-            <a
-              href="#"
-              class="text-md font-semibold text-gray-100 hover:text-primary"
-              >News & Insights</a
-            >
-            <a
-              href="#"
-              class="text-md font-semibold text-gray-100 hover:text-primary"
-              >About</a
-            >
-            <a
-              href="#"
-              class="text-md font-semibold text-gray-100 hover:text-primary"
-              >Contact</a
-            >
-          </div>
-
-          <!-- Mobile Hamburger Button -->
-          <div class="md:hidden flex items-center">
-            <button id="menu-btn" class="text-gray-700 focus:outline-none">
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M4 6h16M4 12h16M4 18h16"
+    <!-- Header & Navigation -->
+    <header>
+      <nav aria-label="Main Navigation">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between items-center h-20">
+            <!-- Logo -->
+            <div class="flex items-center">
+              <a href="/">
+                <img
+                  class="h-16"
+                  src="/assets/images/logo.jpg"
+                  alt="Company Logo"
                 />
-              </svg>
+              </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <ul
+              class="hidden md:flex space-x-4 items-center gap-5 font-poppins"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="text-md font-semibold text-white hover:text-primary"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-md font-semibold text-gray-100 hover:text-primary"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-md font-semibold text-gray-100 hover:text-primary"
+                  >News & Insights</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-md font-semibold text-gray-100 hover:text-primary"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-md font-semibold text-gray-100 hover:text-primary"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+
+            <!-- Mobile Hamburger Button -->
+            <div class="md:hidden flex items-center">
+              <button
+                id="menu-btn"
+                class="text-gray-700 focus:outline-none"
+                aria-label="Toggle mobile menu"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="hidden lg:block"></div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden mt-5 px-10 pb-4">
+          <a href="#" class="block py-2 text-gray-100 hover:text-primary"
+            >Home</a
+          >
+          <a href="#" class="block py-2 text-gray-100 hover:text-primary"
+            >About</a
+          >
+          <a href="#" class="block py-2 text-gray-100 hover:text-primary"
+            >Services</a
+          >
+          <a href="#" class="block py-2 text-gray-100 hover:text-primary"
+            >Contact</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Video Banner -->
+      <section
+        aria-label="Hero video"
+        style="padding: 56.25% 0 0 0; position: relative; overflow: hidden"
+      >
+        <iframe
+          id="vimeo-player"
+          src="https://player.vimeo.com/video/1101538872?badge=0&autopause=0&player_id=0&app_id=58479&dnt=1&autoplay=1&loop=1&controls=0&quality_selector=1"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          style="
+            position: absolute;
+            top: -5%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: scale(1.2);
+            transform-origin: center center;
+          "
+          title="Introductory Video"
+        ></iframe>
+
+        <!-- Mute/Unmute Button -->
+        <button
+          id="mute-toggle"
+          class="absolute bottom-5 right-2.5 lg:bottom-15 lg:right-5 h-8 w-8 lg:h-12 lg:w-12"
+          aria-label="Toggle Mute"
+        >
+          <svg
+            id="volume-on"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#ffff"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"
+            />
+            <path d="M16 9a5 5 0 0 1 0 6" />
+            <path d="M19.364 18.364a9 9 0 0 0 0-12.728" />
+          </svg>
+          <svg
+            id="volume-off"
+            style="display: none"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#ffff"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M16 9a5 5 0 0 1 .95 2.293" />
+            <path d="M19.364 5.636a9 9 0 0 1 1.889 9.96" />
+            <path d="m2 2 20 20" />
+            <path
+              d="m7 7-.587.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298V11"
+            />
+            <path d="M9.828 4.172A.686.686 0 0 1 11 4.657v.686" />
+          </svg>
+        </button>
+      </section>
+
+      <!-- Work Showcase -->
+      <section
+        aria-label="Featured Work"
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-10"
+      >
+        <div class="hidden md:grid md:grid-cols-3 md:grid-rows-2 md:gap-5">
+          <!-- Image Grid -->
+          <figure
+            class="relative rounded-lg overflow-hidden group cursor-pointer"
+          >
+            <img
+              src="/assets/images/1.jpg"
+              alt="Design Showcase 1"
+              class="w-full h-full object-cover"
+            />
+            <figcaption
+              class="overlay-image absolute inset-0 bg-primary/40 pointer-events-none transition-opacity duration-300"
+            ></figcaption>
+          </figure>
+          <!-- Repeat other images similarly with descriptive alt texts -->
+          <figure
+            class="relative rounded-lg overflow-hidden group cursor-pointer"
+          >
+            <img
+              src="/assets/images/2.jpg"
+              alt="Design Showcase 2"
+              class="w-full h-full object-cover"
+            />
+            <figcaption
+              class="overlay-image absolute inset-0 bg-primary/40 pointer-events-none transition-opacity duration-300"
+            ></figcaption>
+          </figure>
+          <figure
+            class="relative rounded-lg overflow-hidden group cursor-pointer"
+          >
+            <img
+              src="/assets/images/3.jpg"
+              alt="Design Showcase 3"
+              class="w-full h-full object-cover"
+            />
+            <figcaption
+              class="overlay-image absolute inset-0 bg-primary/40 pointer-events-none transition-opacity duration-300"
+            ></figcaption>
+          </figure>
+          <figure
+            class="relative rounded-lg overflow-hidden group cursor-pointer"
+          >
+            <img
+              src="/assets/images/5.jpg"
+              alt="Design Showcase 3"
+              class="w-full h-full object-cover"
+            />
+            <figcaption
+              class="overlay-image absolute inset-0 bg-primary/40 pointer-events-none transition-opacity duration-300"
+            ></figcaption>
+          </figure>
+          <figure
+            class="relative rounded-lg overflow-hidden group cursor-pointer"
+          >
+            <img
+              src="/assets/images/6.jpg"
+              alt="Design Showcase 3"
+              class="w-full h-full object-cover"
+            />
+            <figcaption
+              class="overlay-image absolute inset-0 bg-primary/40 pointer-events-none transition-opacity duration-300"
+            ></figcaption>
+          </figure>
+          <!-- Content Block -->
+          <div class="font-poppins bg-primary p-10 rounded-lg">
+            <h2 class="text-2xl lg:text-5xl font-bold">
+              EXPERIENCE<br /><strong class="text-stroke">WORK</strong>
+            </h2>
+            <button
+              class="w-36 mt-5 px-4 p-2 font-semibold border-2 rounded-2xl cursor-pointer hover:bg-black hover:text-white"
+            >
+              EXPLORE
             </button>
           </div>
-          <div class="hidden md:block"></div>
         </div>
-      </div>
+      </section>
 
-      <!-- Mobile Menu -->
-      <div id="mobile-menu" class="md:hidden hidden mt-5 px-10 pb-4">
-        <a href="#" class="block py-2 text-gray-100 hover:text-primary">Home</a>
-        <a href="#" class="block py-2 text-gray-100 hover:text-primary"
-          >About</a
-        >
-        <a href="#" class="block py-2 text-gray-100 hover:text-primary"
-          >Services</a
-        >
-        <a href="#" class="block py-2 text-gray-100 hover:text-primary"
-          >Contact</a
-        >
-      </div>
-    </nav>
-    <!-- Nav Bar -->
-    <!-- Video Banner  -->
-    <div style="padding: 56.25% 0 0 0; position: relative; overflow: hidden">
-      <iframe
-        id="vimeo-player"
-        src="https://player.vimeo.com/video/1101538872?badge=0&autopause=0&player_id=0&app_id=58479&dnt=1&autoplay=1&loop=1&controls=0&quality_selector=1"
-        frameborder="0"
-        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-        style="
-          position: absolute;
-          top: -5%;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          overflow-y: hidden;
-          transform: scale(1.2);
-          transform-origin: center center;
-        "
-        title="banner"
-      ></iframe>
-
-      <!-- Mute/Unmute Button -->
-      <button
-        id="mute-toggle"
-        class="absolute bottom-5 right-2.5 lg:bottom-15 lg:right-5 h-8 w-8 lg:h-12 lg:w-12 hover:cursor-pointer"
-        aria-label="Toggle Mute"
+      <!-- Mobile Navigation Buttons -->
+      <section
+        class="max-w-7xl mx-auto px-4 sm:px-6 md:hidden space-y-5"
+        aria-label="Mobile Navigation Buttons"
       >
-        <!-- Volume On Icon (default) -->
-        <svg
-          id="volume-on"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#ffff"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-volume2-icon"
+        <button
+          class="border-2 p-3 w-full rounded-2xl border-white text-white hover:text-black hover:bg-white"
         >
-          <path
-            d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"
-          />
-          <path d="M16 9a5 5 0 0 1 0 6" />
-          <path d="M19.364 18.364a9 9 0 0 0 0-12.728" />
-        </svg>
-
-        <!-- Volume Off Icon (hidden by default) -->
-        <svg
-          id="volume-off"
-          style="display: none"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#ffff"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-volume-off-icon"
-        >
-          <path d="M16 9a5 5 0 0 1 .95 2.293" />
-          <path d="M19.364 5.636a9 9 0 0 1 1.889 9.96" />
-          <path d="m2 2 20 20" />
-          <path
-            d="m7 7-.587.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298V11"
-          />
-          <path d="M9.828 4.172A.686.686 0 0 1 11 4.657v.686" />
-        </svg>
-      </button>
-    </div>
-    <!-- Video Banner-->
-    <!-- Work  -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="hidden md:grid md:grid-cols-3 md:grid-rows-2 md:gap-5">
-        <div class="relative rounded-lg overflow-hidden group cursor-pointer">
-          <img
-            src="/assets/images/1.jpg"
-            alt="Image"
-            class="w-full h-full object-cover"
-          />
-          <div
-            class="overlay absolute inset-0 bg-primary/40 pointer-events-none transition-opacity duration-300"
-          ></div>
-        </div>
-        <div class="relative rounded-lg overflow-hidden group cursor-pointer">
-          <img
-            src="/assets/images/2.jpg"
-            alt="Image"
-            class="w-full h-full object-cover"
-          />
-          <div
-            class="overlay absolute inset-0 bg-primary/40 pointer-events-none transition-opacity duration-300"
-          ></div>
-        </div>
-        <div class="relative rounded-lg overflow-hidden group cursor-pointer">
-          <img
-            src="/assets/images/3.jpg"
-            alt="Image"
-            class="w-full h-full object-cover"
-          />
-          <div
-            class="overlay absolute inset-0 bg-primary/40 pointer-events-none transition-opacity duration-300"
-          ></div>
-        </div>
-        <div class="relative rounded-lg overflow-hidden group cursor-pointer">
-          <img
-            src="/assets/images/5.jpg"
-            alt="Image"
-            class="w-full h-full object-cover"
-          />
-          <div
-            class="overlay absolute inset-0 bg-primary/40 pointer-events-none transition-opacity duration-300"
-          ></div>
-        </div>
-        <div class="relative rounded-lg overflow-hidden group cursor-pointer">
-          <img
-            src="/assets/images/6.jpg"
-            alt="Image"
-            class="w-full h-full object-cover"
-          />
-          <div
-            class="overlay absolute inset-0 bg-primary/40 pointer-events-none transition-opacity duration-300"
-          ></div>
-        </div>
-
-        <div class="font-poppins bg-primary p-10 rounded-lg">
-          <h2 class="text-2xl lg:text-5xl font-bold">
-            EXPERIENCE <br />
-            <strong class="text-stroke">WORK</strong>
-          </h2>
-          <button
-            class="w-36 mt-5 px-4 p-2 font-semibold border-2 rounded-2xl cursor-pointer hover:bg-black hover:text-white"
-          >
-            EXPLORE
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- Work  -->
-    <!-- Navigation Buttons on mobile view  -->
-    <div class="my-20 max-w-7xl mx-auto px-4 sm:px-6 md:hidden space-y-5">
-      <div class="w-full">
-        <button class="border-2 p-3 w-full rounded-2xl border-white text-white">
           EXPLORE WORK
         </button>
-      </div>
-      <div class="flex justify-between gap-5">
-        <button class="border-2 p-3 rounded-2xl border-white text-white grow">
-          OUR CLIENT
-        </button>
-        <button class="border-2 p-3 rounded-2xl border-white text-white grow">
-          AWARD
-        </button>
-        <button class="border-2 p-3 rounded-2xl border-white text-white grow">
-          ACCOLADES
-        </button>
-      </div>
-    </div>
-    <!-- Navigation Buttons on mobile view  -->
-    <!-- Services -->
-    <div class="my-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div
-        class="grid grid-cols-1 gap-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+        <div class="flex justify-between gap-2 md:gap-5">
+          <button
+            class="border-2 p-3 rounded-2xl border-white text-white grow hover:text-black hover:bg-white"
+          >
+            OUR CLIENT
+          </button>
+          <button
+            class="border-2 p-3 rounded-2xl border-white text-white grow hover:text-black hover:bg-white"
+          >
+            AWARD
+          </button>
+          <button
+            class="border-2 p-3 rounded-2xl border-white text-white grow hover:text-black hover:bg-white"
+          >
+            ACCOLADES
+          </button>
+        </div>
+      </section>
+
+      <!-- About  -->
+      <section
+        class="my-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 font-poppins"
+        aria-label="About Irbinor"
+        role="region"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <header class="text-white">
+            <h1
+              class="text-4xl md:text-4xl lg:text-6xl font-extrabold tracking-tight leading-sung"
+            >
+              IRBINOR IS THE
+              <span class="block text-primary"> WORLD'S </span>
+              <span class="block text-primary"> PREMIER AGENCY </span>
+              <span class="block">FOR ELEVETED EXPERIENCES &</span>
+
+              <span class="block">Innovative Spaces</span>
+            </h1>
+          </header>
+          <div
+            class="hidden md:block relative max-w-md md:max-w-lg mx-auto cursor-pointer"
+          >
+            <div
+              class="absolute -top-4 left-5 h-full w-[100%] border-[3px] border-primary rounded-2xl"
+            ></div>
+            <video
+              class="w-full h-80 rounded-lg shadow-lg object-cover"
+              autoplay
+              loop
+              muted
+              aria-label="Promotional video showcasing Irbinor's elevated experiences"
+            >
+              <source src="/assets/videos/world.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+      <!-- About  -->
+
+      <!-- Services -->
+      <section
+        class="my-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 font-poppins"
+        aria-label="Our Services"
       >
         <div
-          class="h-72 bg-gray-200 p-4 rounded flex flex-col justify-center items-center"
+          class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4"
         >
-          <p class="text-4xl font-bold">70+</p>
-          <h2>Design</h2>
+          <!-- START CARD -->
+          <article
+            class="card-hover relative bg-[#1A1A1A] text-white h-96 p-6 rounded flex flex-col items-center text-center transition-all duration-300 overflow-hidden"
+          >
+            <!-- Overlay -->
+            <div
+              class="overlay absolute inset-0 opacity-0 transition-opacity duration-300 rounded z-0"
+            ></div>
+
+            <!-- Content -->
+            <div
+              class="relative z-10 flex flex-col justify-center items-center"
+            >
+              <img
+                src="/assets/icons/design.png"
+                alt="Design Icon"
+                class="w-24 h-24 mb-4"
+              />
+              <p
+                class="text-6xl font-bold count-up mb-6 transition-all duration-300"
+                data-target="70"
+              >
+                0
+              </p>
+              <h3 class="text-2xl font-semibold mb-2">Design</h3>
+              <p class="text-sm">
+                Our creative team crafts stunning visuals and spaces, from event
+                decor to bespoke interiors, that captivate and inspire.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="card-hover relative bg-[#1A1A1A] text-white h-96 p-6 rounded flex flex-col items-center text-center transition-all duration-300 overflow-hidden"
+          >
+            <!-- Overlay -->
+            <div
+              class="overlay absolute inset-0 opacity-0 transition-opacity duration-300 rounded z-0"
+            ></div>
+
+            <!-- Content -->
+            <div
+              class="relative z-10 flex flex-col justify-center items-center"
+            >
+              <img
+                src="/assets/icons/management.png"
+                alt="Management Icon"
+                class="w-24 h-24 mb-4"
+              />
+              <p
+                class="text-6xl font-bold count-up mb-6 transition-all duration-300"
+                data-target="50"
+              >
+                0
+              </p>
+              <h3 class="text-2xl font-semibold mb-2">Management</h3>
+              <p class="text-sm">
+                From corporate galas to intimate weddings, we plan and execute
+                flawless events tailored to your vision.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="card-hover relative bg-[#1A1A1A] text-white h-96 p-6 rounded flex flex-col items-center text-center transition-all duration-300 overflow-hidden"
+          >
+            <!-- Overlay -->
+            <div
+              class="overlay absolute inset-0 opacity-0 transition-opacity duration-300 rounded z-0"
+            ></div>
+
+            <!-- Content -->
+            <div
+              class="relative z-10 flex flex-col justify-center items-center"
+            >
+              <img
+                src="/assets/icons/hospitality.png"
+                alt="Hospitality Icon"
+                class="w-24 h-24 mb-4"
+              />
+              <p
+                class="text-6xl font-bold count-up mb-6 transition-all duration-300"
+                data-target="100"
+              >
+                0
+              </p>
+              <h3 class="text-2xl font-semibold mb-2">Hospitality</h3>
+              <p class="text-sm">
+                Elevate your guest experience with our world-class hospitality
+                services, ensuring comfort and luxury at every touchpoint.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="card-hover relative bg-[#1A1A1A] text-white h-96 p-6 rounded flex flex-col items-center text-center transition-all duration-300 overflow-hidden"
+          >
+            <!-- Overlay -->
+            <div
+              class="overlay absolute inset-0 opacity-0 transition-opacity duration-300 rounded z-0"
+            ></div>
+
+            <!-- Content -->
+            <div
+              class="relative z-10 flex flex-col justify-center items-center"
+            >
+              <img
+                src="/assets/icons/gifting.png"
+                alt="Gifting Icon"
+                class="w-24 h-24 mb-4"
+              />
+              <p
+                class="text-6xl font-bold count-up mb-6 transition-all duration-300"
+                data-target="70"
+              >
+                0
+              </p>
+              <h3 class="text-2xl font-semibold mb-2">Gifting</h3>
+              <p class="text-sm">
+                Thoughtful, curated gifts for any occasion, designed to leave a
+                lasting impression.
+              </p>
+            </div>
+          </article>
+          <!-- END CARD -->
         </div>
-        <div
-          class="h-72 bg-gray-200 p-4 rounded flex flex-col justify-center items-center"
-        >
-          <p class="text-4xl font-bold">50+</p>
-          <h2>Managment</h2>
+      </section>
+    </main>
+
+    <!-- Footer  -->
+    <!-- Footer -->
+    <footer class="bg-black text-white py-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Company Info -->
+          <div class="flex flex-col items-center md:items-start">
+            <a href="/" class="mb-4">
+              <img
+                class="h-12"
+                src="/assets/images/logo.jpg"
+                alt="Company Logo"
+              />
+            </a>
+            <p class="text-sm text-gray-400 text-center md:text-left">
+              Delivering innovative design, management, hospitality, and gifting
+              solutions since 2000.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-primary">Home</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-primary"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-primary"
+                  >News & Insights</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-primary">About</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-primary">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+            <ul class="space-y-2 text-sm">
+              <li class="text-gray-400">123 Creative Street, Suite 100</li>
+              <li class="text-gray-400">City, State, 12345</li>
+              <li>
+                <a
+                  href="mailto:info@company.com"
+                  class="text-gray-400 hover:text-primary"
+                  >info@company.com</a
+                >
+              </li>
+              <li>
+                <a
+                  href="tel:+1234567890"
+                  class="text-gray-400 hover:text-primary"
+                  >+1 (234) 567-890</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Social Media -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary"
+                aria-label="Facebook"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary"
+                aria-label="Twitter"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary"
+                aria-label="Instagram"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1 Nothing to show here yet...668-4.919 4.919-4.919 1.266-.058 1.644-.069 4.849-.069 3.204 0 3.584-.012 4.849-.07 3.26-.149 4.771-1.695 4.919-4.919.058-1.265.07-1.644.07-4.849 0-3.204-.013-3.583-.07-4.849-.149-3.227-1.664-4.771-4.919-4.919-1.266-.057-1.645-.069-4.849-.069zm0-2.163c3.34 0 3.744.013 5.066.073 3.892.18 6.258 2.55 6.438 6.438.06 1.322.073 1.726.073 5.066 0 3.34-.013 3.744-.073 5.066-.18 3.888-2.546 6.258-6.438 6.438-1.322.06-1.726.073-5.066.073s-3.744-.013-5.066-.073c-3.892-.18-6.258-2.55-6.438-6.438-.06-1.322-.073-1.726-.073-5.066 0-3.34.013-3.744.073-5.066.18-3.888 2.546-6.258 6.438-6.438 1.322-.06 1.726-.073 5.066-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0-2.88 1.44 1.44 0 0 0 0 2.88z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary"
+                aria-label="LinkedIn"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.024-3.037-1.85-3.037-1.852 0-2.136 1.447-2.136 2.941v5.665H9.352V9h3.414v1.561h.048c.477-.9 1.638-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 0 1 2.063-2.065 2.064 2.064 0 0 1 2.064 2.065 2.062 2.062 0 0 1-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
-        <div
-          class="h-72 bg-gray-200 p-4 rounded flex flex-col justify-center items-center"
-        >
-          <p class="text-4xl font-bold">71+</p>
-          <h2>Hospitality</h2>
-        </div>
-        <div
-          class="h-72 bg-gray-200 p-4 rounded flex flex-col justify-center items-center"
-        >
-          <p class="text-4xl font-bold">100+</p>
-          <h2>Gifting</h2>
+
+        <!-- Copyright -->
+        <div class="mt-8 border-t border-gray-700 pt-6 text-center">
+          <p class="text-sm text-gray-400">
+            &copy; 2025 Your Company Name. All rights reserved.
+          </p>
         </div>
       </div>
-    </div>
-    <!-- Services -->
+    </footer>
+    <!-- Footer  -->
+    <!-- Scripts -->
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/count-up.js"></script>
   </body>
-  <script src="https://player.vimeo.com/api/player.js"></script>
-  <script src="./assets/js/main.js"></script>
 </html>
