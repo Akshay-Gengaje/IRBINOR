@@ -150,31 +150,42 @@
     <!-- Main Content -->
     <main>
       <!-- Video Banner -->
+      <!-- Video Banner -->
       <section
         aria-label="Hero video"
-        style="padding: 56.25% 0 0 0; position: relative; overflow: hidden"
+        class="relative overflow-hidden pt-[56.25%]"
       >
+        <!-- Vimeo iframe -->
         <iframe
           id="vimeo-player"
           src="https://player.vimeo.com/video/1101538872?badge=0&autopause=0&player_id=0&app_id=58479&dnt=1&autoplay=1&loop=1&controls=0&quality_selector=1"
           frameborder="0"
           allow="autoplay; fullscreen; picture-in-picture"
-          style="
-            position: absolute;
-            top: -5%;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            transform: scale(1.2);
-            transform-origin: center center;
-          "
           title="Introductory Video"
+          class="absolute top-[-5%] left-0 w-full h-full scale-[1.2] origin-center"
         ></iframe>
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/70 z-10"></div>
+
+        <!-- Heading -->
+        <div class="absolute inset-0 flex items-center z-20 text-center px-4">
+          <h1
+            class="ml-2 sm:ml-5 md:ml-10 lg:ml-15 text-white text-left text-3xl md:text-5xl lg:text-6xl font-bold leading-tight"
+          >
+            <span class="text-primary">LARGER THAN LIFE</span><br />
+
+            <span
+              class="font-light drop-shadow-[0_1px_4px_rgba(255,255,255,0.7)] leading-normal"
+              >WITH A LAST MILE TOUCH</span
+            >
+          </h1>
+        </div>
 
         <!-- Mute/Unmute Button -->
         <button
           id="mute-toggle"
-          class="absolute bottom-5 right-2.5 lg:bottom-15 lg:right-5 h-8 w-8 lg:h-12 lg:w-12"
+          class="absolute bottom-5 right-2.5 lg:bottom-15 lg:right-5 h-8 w-8 lg:h-12 lg:w-12 z-30"
           aria-label="Toggle Mute"
         >
           <svg
@@ -182,10 +193,11 @@
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="#ffff"
+            stroke="#fff"
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
+            class="w-full h-full"
           >
             <path
               d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"
@@ -199,10 +211,11 @@
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="#ffff"
+            stroke="#fff"
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
+            class="w-full h-full"
           >
             <path d="M16 9a5 5 0 0 1 .95 2.293" />
             <path d="M19.364 5.636a9 9 0 0 1 1.889 9.96" />
