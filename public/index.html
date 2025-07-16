@@ -17,6 +17,10 @@
     <title>Creative Services | Design, Hospitality & Management</title>
 
     <style>
+      .active {
+        color: black !important;
+        background-color: white !important;
+      }
       .card-hover .overlay {
         background: linear-gradient(
           90deg,
@@ -103,7 +107,7 @@
             <div class="md:hidden flex items-center">
               <button
                 id="menu-btn"
-                class="text-gray-700 focus:outline-none"
+                class="text-white focus:outline-none"
                 aria-label="Toggle mobile menu"
               >
                 <svg
@@ -121,7 +125,7 @@
                 </svg>
               </button>
             </div>
-            <div class="hidden lg:block"></div>
+            <div class="hidden md:block"></div>
           </div>
         </div>
 
@@ -299,23 +303,27 @@
         aria-label="Mobile Navigation Buttons"
       >
         <button
-          class="border-2 p-3 w-full rounded-2xl border-white text-white hover:text-black hover:bg-white"
+          class="border-2 p-3 w-full rounded-2xl border-white text-white active:text-black active:bg-white"
+          onclick="this.classList.toggle('active')"
         >
           EXPLORE WORK
         </button>
         <div class="flex justify-between gap-2 md:gap-5">
           <button
-            class="border-2 p-3 rounded-2xl border-white text-white grow hover:text-black hover:bg-white"
+            class="border-2 p-3 rounded-2xl border-white text-white grow active:text-black active:bg-white"
+            onclick="this.classList.toggle('active')"
           >
             OUR CLIENT
           </button>
           <button
-            class="border-2 p-3 rounded-2xl border-white text-white grow hover:text-black hover:bg-white"
+            class="border-2 p-3 rounded-2xl border-white text-white grow active:text-black active:bg-white"
+            onclick="this.classList.toggle('active')"
           >
             AWARD
           </button>
           <button
-            class="border-2 p-3 rounded-2xl border-white text-white grow hover:text-black hover:bg-white"
+            class="border-2 p-3 rounded-2xl border-white text-white grow active:text-black active:bg-white"
+            onclick="this.classList.toggle('active')"
           >
             ACCOLADES
           </button>
